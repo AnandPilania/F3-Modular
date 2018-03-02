@@ -1,4 +1,9 @@
 {
+    "name": "anandpilania/f3-modular",
+    "description": "",
+    "keywords": ["f3", "fatfree", "f3-modular", "anandpilania"],
+    "type": "project",
+    "license": "MIT",
     "require": {
         "bcosca/fatfree-core": "^3.6",
         "ikkez/f3-cortex": "^1.5",
@@ -20,5 +25,7 @@
     "autoload": {
     	"files": ["bootstrap/helpers.php", "app.php"],
     	"classmap": ["helpers/"]
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
