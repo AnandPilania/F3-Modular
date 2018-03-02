@@ -1,0 +1,5 @@
+/vendor
+/public/tmp
+/storage/db
+/storage/app
+/storage/temp

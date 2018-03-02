@@ -1,0 +1,24 @@
+{
+    "require": {
+        "bcosca/fatfree-core": "^3.6",
+        "ikkez/f3-cortex": "^1.5",
+        "ikkez/f3-flash": "^1.0",
+        "ikkez/f3-fal": "^0.7.2",
+        "firebase/php-jwt": "^5.0",
+        "ikkez/f3-assets": "^1.1",
+        "ikkez/f3-mailer": "^1.0",
+        "ikkez/f3-events": "dev-master",
+        "ikkez/f3-middleware": "^1.1",
+        "ikkez/f3-opauth": "dev-master",
+        "ikkez/f3-pagination": "^1.4",
+        "xfra35/f3-access": "^1.0",
+        "xfra35/f3-cron": "^1.2",
+        "xfra35/f3-multilang": "^1.2",
+        "rafamds/f3-falsum": "^2.6",
+        "anandpilania/f3-validator": "^1.1"
+    },
+    "autoload": {
+    	"files": ["bootstrap/helpers.php", "app.php"],
+    	"classmap": ["helpers/"]
+    }
+}
