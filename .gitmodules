@@ -10,9 +10,9 @@
 [submodule "auth"]
 	path = modules/auth
 	url = git@ap.git:AnandPilania/f3-module-auth
-[submodule "jwtauth"]
-	path = modules/jwtauth
-	url = git@ap.git:AnandPilania/f3-module-jwtauth
+[submodule "oauth"]
+	path = modules/oauth
+	url = git@ap.git:AnandPilania/f3-module-oauth
 [submodule "blogger"]
 	path = modules/blogger
 	url = git@ap.git:AnandPilania/f3-module-blogger
