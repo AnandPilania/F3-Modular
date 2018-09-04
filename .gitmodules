@@ -1,0 +1,18 @@
+[submodule "core"]
+	path = modules/core
+	url = git@ap.git:AnandPilania/f3-module-core
+[submodule "cli"]
+	path = modules/cli
+	url = git@ap.git:AnandPilania/f3-module-cli
+[submodule "installer"]
+	path = modules/installer
+	url = git@ap.git:AnandPilania/f3-module-installer
+[submodule "auth"]
+	path = modules/auth
+	url = git@ap.git:AnandPilania/f3-module-auth
+[submodule "jwtauth"]
+	path = modules/jwtauth
+	url = git@ap.git:AnandPilania/f3-module-jwtauth
+[submodule "blogger"]
+	path = modules/blogger
+	url = git@ap.git:AnandPilania/f3-module-blogger
