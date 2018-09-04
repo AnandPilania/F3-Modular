@@ -30,13 +30,13 @@ class User extends Model
                 'default' => false
                 ),
             'api_token' => array(
-                'has-one' => array('\Auth\Models\Token', 'user')
+                'has-one' => array(Token::class, 'user')
                 ),
             'password_token' => array(
-                'has-one' => array('\Auth\Models\PasswordReset', 'user')
+                'has-one' => array(PasswordReset::class, 'user')
                 ),
             'activation_token' => array(
-                'has-one' => array('\Auth\Models\Activation', 'user')
+                'has-one' => array(Activation::class, 'user')
                 ),
         );
     public function set_first_name($fName)

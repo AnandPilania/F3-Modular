@@ -1,5 +1,6 @@
 /vendor
 /public/tmp
+/public/compressed
 /storage/db
 /storage/app
 /storage/temp

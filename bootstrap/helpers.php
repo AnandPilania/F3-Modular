@@ -21,20 +21,6 @@ function status($code = 404)
 {
     f3()->error($code);
 }
-function view($template, array $data = [])
-{
-	Response::instance()->view($template, $data);
-	exit();
-}
-function response($key, $val = null)
-{
-	if(!is_array($key)) {
-		$key = [$key => $val];
-	}
-	header('Content-Type: application/json; charset='.f3()->CHARSET);
-	echo json_encode($key);
-	exit();
-}
 function reroute($where)
 {
     f3()->reroute($where);
@@ -45,6 +31,30 @@ function is_api($path)
         return explode('/', $path)[1] === 'api';
     }
     return false;
+}
+function view($template, array $data = [])
+{
+	return Response::instance()->view($template, $data);
+}
+function response($key, $val = null)
+{
+	return Response::instance()->json($key, $val);
+}
+function template($layout, $f3)
+{
+    $loc = null;
+    if(Str::contains($layout, '::')) {
+        $module = explode('::', $layout)[0];
+        foreach(explode(';', $f3->UI) as $path) {
+            if(Str::contains($path, 'modules/'.$module) || Str::contains($path, str_ireplace('/', '', 'modules\/'.$module))) {
+                $loc = str_ireplace($module.'::', '', $path.$layout);
+                break;
+            }
+        }
+    }else{
+        $loc = $layout;
+    }
+    return $loc;
 }
 function generateKey($chiper = 'AES-256-CBC')
 {

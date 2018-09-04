@@ -10,26 +10,21 @@ class Response extends Prefab
 
 	public function view($layout, $data = [])
 	{
-		$loc = null;
-		if(Str::contains($layout, '::')) {
-			$module = explode('::', $layout)[0];
-			foreach(explode(';', $this->f3->UI) as $path) {
-				if(Str::contains($path, 'modules/'.$module) || Str::contains($path, str_ireplace('/', '', 'modules\/'.$module))) {
-					$loc = str_ireplace($module.'::', '', $path.$layout);
-					break;
-				}
-			}
-		}else{
-			$loc = $layout;
-		}
-
 		$f3 = f3();
 		$f3->mset($data);
+		$loc = template($layout, $f3);
 		//$f3->set('content', hasExtension($template));
 		echo Template::instance()->render($loc.'.htm');//'layouts/app.htm');
 		exit();
 	}
 
 	public function json($data = [], $status = '200')
-	{}
+	{
+		if(!is_array($key)) {
+			$key = [$key => $val];
+		}
+		header('Content-Type: application/json; charset='.f3()->CHARSET);
+		echo json_encode($key);
+		exit();
+	}
 }

@@ -103,9 +103,9 @@ class Modules
 
 		foreach(glob($path.'*') as $module) {
 			$file = $module.'/Module.php';
-			$class = ucfirst(str_ireplace($path, '', $module)).'\Module';
 			if(file_exists($file)) {
 				require $file;
+				$class = ucfirst(str_ireplace($path, '', $module)).'\Module';
 				if(class_exists($class)) {
 					(new $class())->init();
 				}
@@ -116,6 +116,6 @@ class Modules
 	static public function autoload($class)
 	{
 		$file = self::$path . str_replace('\\', '/', $class) . '.php';
-		require $file;
+		if(file_exists($file)) { require $file; }
 	}
 }

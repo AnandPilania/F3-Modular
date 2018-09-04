@@ -1,12 +1,12 @@
 <?php
 
 use DB\Cortex;
-use DB\SoftErase;
+//use DB\SoftErase;
 use DB\SQL\Schema;
 
 abstract class Model extends Cortex
 {
-    use SoftErase;
+    //use SoftErase;
 
     public $f3, $db = 'DB';
     public $fieldConf = array(
