@@ -1,18 +1,18 @@
 [submodule "modules/core"]
 	path = modules/core
-	url = git@ap.git:AnandPilania/f3-module-core
+	url = https://github.com/AnandPilania/f3-module-core
 [submodule "modules/cli"]
 	path = modules/cli
-	url = git@ap.git:AnandPilania/f3-module-cli
+	url = https://github.com/AnandPilania/f3-module-cli
 [submodule "modules/installer"]
 	path = modules/installer
-	url = git@ap.git:AnandPilania/f3-module-installer
+	url = https://github.com/AnandPilania/f3-module-installer
 [submodule "modules/auth"]
 	path = modules/auth
-	url = git@ap.git:AnandPilania/f3-module-auth
+	url = https://github.com/AnandPilania/f3-module-auth
 [submodule "modules/oauth"]
 	path = modules/oauth
-	url = git@ap.git:AnandPilania/f3-module-oauth
+	url = https://github.com/AnandPilania/f3-module-oauth
 [submodule "modules/blogger"]
 	path = modules/blogger
-	url = git@ap.git:AnandPilania/f3-module-blogger
+	url = https://github.com/AnandPilania/f3-module-blogger
